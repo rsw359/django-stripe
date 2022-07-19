@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'djstripetut.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR /'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,3 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STRIPE_PUBLIC_KEY = "pk_test_51LN8W3Gs4rtxgJDu9cAoxdiUQBMuBXlTzRjSwAXMP1FiQry0YGsX2yOB7gRSo29p2qixqLIShTvPSjGKRc4ZI7Nq00XGdMzMVX"
+STRIPE_SECRET_KEY = "sk_test_51LN8W3Gs4rtxgJDucPzyjY8mdSdMYgwchPGhf8o0xoiEGUHBhVNJNJnk7fK28MR8hSpMw83MPcmtnCafS1szlH3u004Nc3xNsu"
+STRIPE_WEBHOOK_SECRET = ""
